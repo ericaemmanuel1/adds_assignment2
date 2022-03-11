@@ -2,7 +2,7 @@
 using namespace std;
 
 Computer::Computer(){
-    input='R';
+    input='R'; //the computer player only plays Rock.
 }
 
 char Computer::makeMove(){
