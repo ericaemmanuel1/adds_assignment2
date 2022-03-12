@@ -1,10 +1,13 @@
 #include "Computer.h"
+
 using namespace std;
 
-Computer::Computer(){
-    input='R'; // the computer player only plays Rock.
+ComputerPlayer::ComputerPlayer()
+{
+	choice='R';
 }
 
-char Computer::makeMove(){
-	input='R';
+void ComputerPlayer::makeMove()
+{
+	choice='R';
 }
