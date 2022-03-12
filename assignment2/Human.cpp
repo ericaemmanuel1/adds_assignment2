@@ -1,13 +1,15 @@
 #include "Human.h"
+
 #include<iostream>
+
 using namespace std;
 
-Human::Human()
+HumanPlayer::HumanPlayer()
 {
-	input='R';
+	choice='R';
 }
 
-char HumanPlayer::makeMove()
+void HumanPlayer::makeMove()
 {
-	getline(cin, input);
+	cin>>choice;
 }
