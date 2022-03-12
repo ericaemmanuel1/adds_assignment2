@@ -1,30 +1,24 @@
 #include "Referee.h"
+
 using namespace std;
-#include "Computer.h"
-#include "Human.h"
-#include "Referee.h"
 
-char Referee::refGame(Human p1,Computer p2)
-{
-Human you;
-    you.play();
-    string your_input = you.get();
-    int num = your_input[0] - '0';
-    for (int i= 1; i<=num; i++) {
-        Computer ai;
-        ai.play();
-        string ai_input = ai.get();
-        if (your_input[i*2] == ai_input[0]) {
-            cout<<"T";
-        } else if (((your_input[i*2] == 'R')&&(ai_input[0]=='S'))||((your_input[i*2] == 'P')&&(ai_input[0]=='R'))||((your_input[i*2] == 'S')&&(ai_input[0]=='P'))) {
-            cout<<"W";
-        } else {
-           cout<<"L";
-        }
 
-        if (i != num) {
-          cout<<" ";
-        }
-    }
-    cout<<endl;
+char Referee::refGame(HumanPlayer p1,ComputerPlayer p2)
+{	
+	p1.makeMove();
+	p2.makeMove();
+	char m1=p1.getMove(),m2=p2.getMove();
+	if((m1 == m2 ))
+	{
+		return 'T';
+	}
+	if( ( m1 == 'R' && m2 == 'S')||( m1 == 'P' && m2 == 'R')||( m1 == 'S' && m2 == 'P') )
+	{
+		return 'W';
+	}
+	else
+	{	
+		return 'L';
+	}
+	return 'A';
 }
