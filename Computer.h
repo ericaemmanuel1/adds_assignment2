@@ -7,7 +7,7 @@ class ComputerPlayer : public Player
 {    
 	public: 
 		ComputerPlayer();       
-		virtual void makeMove();
+		char makeMove();
 };
 
 #endif
