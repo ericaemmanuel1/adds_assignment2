@@ -1,12 +1,13 @@
 #ifndef HUMAN_H
 #define HUMAN_H
+
 #include "Player.h"
 
-class Human : public Player 
+class HumanPlayer : public Player 
 {    
 	public:     
-	Human( ); // constructor
-	char makeMove( );  
+		HumanPlayer();   
+		virtual void makeMove();
 };
 
 #endif
